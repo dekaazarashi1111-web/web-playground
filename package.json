@@ -1,0 +1,14 @@
+{
+  "name": "github-pages-preview-playground",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable GitHub Pages preview and test playground",
+  "scripts": {
+    "preview:build": "node tools/build-preview.mjs",
+    "preview:serve": "node tools/serve-preview.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

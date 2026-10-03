@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/github-pages-preview-config.schema.json",
+  "title": "GitHub Pages Preview Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "sourceDir", "spaFallback", "emitMetadata", "build"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["static", "command"],
+      "default": "static"
+    },
+    "sourceDir": {
+      "type": "string",
+      "minLength": 1,
+      "default": "site"
+    },
+    "spaFallback": {
+      "type": "boolean",
+      "default": false
+    },
+    "emitMetadata": {
+      "type": "boolean",
+      "default": true
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["workingDirectory", "command", "publishDir"],
+      "properties": {
+        "workingDirectory": {
+          "type": "string",
+          "minLength": 1,
+          "default": "."
+        },
+        "command": {
+          "type": "string",
+          "default": ""
+        },
+        "publishDir": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": { "const": "command" }
+        }
+      },
+      "then": {
+        "properties": {
+          "build": {
+            "properties": {
+              "command": { "minLength": 1 },
+              "publishDir": { "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

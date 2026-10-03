@@ -1,0 +1,12 @@
+{
+  "$schema": "../tools/preview-config.schema.json",
+  "mode": "command",
+  "sourceDir": "site",
+  "spaFallback": true,
+  "emitMetadata": true,
+  "build": {
+    "workingDirectory": ".",
+    "command": "npm ci && npm run build",
+    "publishDir": "dist"
+  }
+}

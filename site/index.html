@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#111827">
+    <title>Preview Playground Ready</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script type="module" src="./assets/app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="status"><span aria-hidden="true"></span> GitHub Pages preview ready</div>
+        <p class="eyebrow">REUSABLE PUBLIC PLAYGROUND</p>
+        <h1>このリポジトリは<br>自由に差し替えられます。</h1>
+        <p class="lead">
+          公開対象は <code>site/</code>。ファイル数、ディレクトリ構成、デザイン、JavaScriptの構成が変わっても、
+          同じURLへ自動デプロイできます。
+        </p>
+      </header>
+
+      <section class="grid" aria-label="Repository design">
+        <article class="card">
+          <div class="number">01</div>
+          <h2>Replace</h2>
+          <p><code>site/</code> の中身は、前回と無関係な構成へ全面的に置き換えられます。</p>
+        </article>
+        <article class="card">
+          <div class="number">02</div>
+          <h2>Deploy</h2>
+          <p><code>main</code> の変更を検知し、GitHub Actionsが公開用成果物だけをPagesへ送ります。</p>
+        </article>
+        <article class="card">
+          <div class="number">03</div>
+          <h2>Extend</h2>
+          <p>必要になれば、静的コピーからVite等の任意ビルドへ設定だけで切り替えられます。</p>
+        </article>
+      </section>
+
+      <section class="metadata" aria-labelledby="metadata-title">
+        <div>
+          <p class="eyebrow">DEPLOYMENT METADATA</p>
+          <h2 id="metadata-title">現在の公開情報</h2>
+        </div>
+        <button id="reload" type="button">再読み込み</button>
+        <dl id="metadata-list" aria-live="polite">
+          <div><dt>Status</dt><dd>Loading…</dd></div>
+        </dl>
+      </section>
+
+      <footer>
+        <p>Next: replace everything under <code>site/</code> and push to <code>main</code>.</p>
+      </footer>
+    </main>
+  </body>
+</html>

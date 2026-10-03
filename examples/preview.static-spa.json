@@ -1,0 +1,12 @@
+{
+  "$schema": "../tools/preview-config.schema.json",
+  "mode": "static",
+  "sourceDir": "site",
+  "spaFallback": true,
+  "emitMetadata": true,
+  "build": {
+    "workingDirectory": ".",
+    "command": "",
+    "publishDir": ""
+  }
+}

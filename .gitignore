@@ -1,0 +1,20 @@
+# Generated Pages artifact
+.pages-dist/
+
+# Package-manager and framework outputs
+node_modules/
+dist/
+build/
+out/
+.vite/
+.cache/
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
+
+# Operating-system files
+.DS_Store
+Thumbs.db
