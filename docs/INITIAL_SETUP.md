@@ -9,7 +9,7 @@
 - カスタムドメイン: なし
 - HTTPS強制: 有効
 - GitHub Actions: 有効
-- Environment: `github-pages`（待機時間・承認者・ブランチ制限なし）
+- Environment: `github-pages`（待機時間・承認者なし。Pagesが自動設定した`main`からのデプロイを許可）
 - ブランチ保護・Ruleset: なし
 - Secrets: 追加なし
 - 公開成果物: `.pages-dist/`のみ。生成物はGit管理対象外。
@@ -30,6 +30,15 @@
 - Pagesの`workflow`設定、HTTPS強制、Environment設定: GitHub APIで確認済み。
 - デプロイ履歴: https://github.com/dekaazarashi1111-web/web-playground/actions/workflows/deploy-pages.yml
 - 公開中のコミット: https://dekaazarashi1111-web.github.io/web-playground/_preview/meta.json
+
+## 初回公開の確認
+
+- 初回コミット: `b345aa09a038c56cc3b6b34ee8dc12a13c8a2b00`
+- Actions実行: https://github.com/dekaazarashi1111-web/web-playground/actions/runs/37088864417 （`completed / success`）
+- 公開HTML、CSS、JavaScript、favicon、`_preview/meta.json`: HTTP 200を確認。
+- メタデータのコミットと`/web-playground`ベースパスが一致した。
+- ブラウザ上でページと公開情報（Repository / Mode / Base path / Commit / Files / Built）の表示を確認した。
+- GitHub連携から新規リポジトリへの読み取り・書き込み権限が見えることを確認した。
 
 ## ネットワーク利用と確認資料
 
